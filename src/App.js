@@ -42,7 +42,7 @@ function App() {
   })
 
   const refreshList = () => {
-    Axios.get('http://localhost:3001/read').then((response) => {
+    Axios.get('https://crudmern-todo.herokuapp.com/read').then((response) => {
       dispatch({ type: 'updateList', payload: response.data })
       console.log("list refreshed:", state.todoList)
     })
